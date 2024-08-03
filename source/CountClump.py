@@ -21,22 +21,22 @@ class CountClump:
     Returns:
       The number of clumps in the list.
     """
-    if nums is None or len(nums) == 0:
+    if nums is None or len(nums) == 0:   #Block1
       return 0
 
-    count = 0
+    count = 0     #Block2
     prev = nums[0]
     in_clump = False
 
-    for i in range(1, len(nums)):
-      if nums[i] == prev and not in_clump:
+    for i in range(1, len(nums)):     #Block3
+      if nums[i] == prev and not in_clump:  #Block4
         in_clump = True
         count += 1
-      elif nums[i] != prev:
+      elif nums[i] != prev:   #Block5
         prev = nums[i]
         in_clump = False
 
-    return count
+    return count    #Block6
 
 # Example usage:
 nums = [1, 2, 2, 3, 3, 4, 4, 4, 1]
